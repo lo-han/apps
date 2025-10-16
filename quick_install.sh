@@ -1,8 +1,20 @@
 #!/bin/sh
 
 # Code
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.25.2.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
+#######################################################
+
+# Git
+sudo apt -y install git
+#######################################################
+
+# Net tools
+sudo apt-get -y install net-tools
+#######################################################
+
+# Code Editor synced to GitHub account
+sudo snap install --classic code
 #######################################################
 
 # Containers
@@ -36,12 +48,4 @@ sudo snap install kubectl --classic
 sudo snap install helm --classic
 helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
 helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --create-namespace --namespace kubernetes-dashboard
-#######################################################
-
-# Git
-sudo apt -y install git
-#######################################################
-
-# Code Editor synced to GitHub account
-sudo snap install --classic code
 #######################################################
