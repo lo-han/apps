@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Net tools
+sudo apt-get -y install net-tools
+#######################################################
+
 # Code
 curl https://go.dev/dl/go1.25.3.linux-amd64.tar.gz > go.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go.linux-amd64.tar.gz
@@ -8,10 +12,6 @@ export PATH=$PATH:/usr/local/go/bin
 
 # Git
 sudo apt -y install git
-#######################################################
-
-# Net tools
-sudo apt-get -y install net-tools
 #######################################################
 
 # Code Editor synced to GitHub account
