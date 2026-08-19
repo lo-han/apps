@@ -16,3 +16,8 @@ sudo apt -y install git
 # VSCode
 #######################################################
 sudo snap install --classic code
+
+#######################################################
+# Assistants
+#######################################################
+curl -fsSL https://claude.ai/install.sh | bash
