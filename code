@@ -1,27 +1,22 @@
 sudo apt-get -y install net-tools
 
 #######################################################
-# Golang
-#######################################################
-curl https://go.dev/dl/go1.25.3.linux-amd64.tar.gz > go.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go.linux-amd64.tar.gz
-export PATH=$PATH:/usr/local/go/bin
-
-#######################################################
 # Git
 #######################################################
 sudo apt -y install git
 
 #######################################################
-# VSCode
-#######################################################
-sudo snap install --classic code
-
-#######################################################
-# Assistants
+# SDD
 #######################################################
 curl -fsSL https://claude.ai/install.sh | bash
+
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv tool install specify-cli --from git+https://github.com/github/spec-kit.git@v0.16.5
+
 claude plugin marketplace add samber/cc
 claude plugin install cc-skills-golang@samber
+
+#######################################################
+# Text Editor
+#######################################################
+sudo snap install --classic code
