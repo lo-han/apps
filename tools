@@ -6,7 +6,7 @@ sudo apt-get -y install net-tools
 sudo apt -y install git
 
 #######################################################
-# SDD
+# Assistant
 #######################################################
 curl -fsSL https://claude.ai/install.sh | bash
 claude plugin marketplace add samber/cc && claude plugin install cc-skills-golang@samber
