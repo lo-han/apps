@@ -9,12 +9,8 @@ sudo apt -y install git
 # SDD
 #######################################################
 curl -fsSL https://claude.ai/install.sh | bash
-
-curl -LsSf https://astral.sh/uv/install.sh | sh
-uv tool install specify-cli --from git+https://github.com/github/spec-kit.git@v0.16.5
-
-claude plugin marketplace add samber/cc
-claude plugin install cc-skills-golang@samber
+claude plugin marketplace add samber/cc && claude plugin install cc-skills-golang@samber
+claude plugin marketplace add git@github.com:lo-han/sdd-skill.git && claude plugin install sdd@sdd-skill
 
 #######################################################
 # Debugger
